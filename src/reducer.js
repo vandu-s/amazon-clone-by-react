@@ -1,22 +1,18 @@
 export const initialState = {
-    basket: [
-        {
-            id: 'ff55f',
-            title: 'HP 15 (2021) Thin & Light Ryzen 3-3250 Laptop, 8 GB RAM, 1TB HDD, 39.62 cms (15.6") FHD Screen, Windows 10, MS Office (15s-gr0011AU)',
-            price: 11.96,
-            rating: 5,
-            image: 'https://images-na.ssl-images-amazon.com/images/I/41mQtYQUzmL.jpg'
-
-        },
-    ],
-    USER: null
+    basket: [],
+    user: null
 
 }
-export const getBasketTotal = (basket) => basket?.reducer((amount, item) => item.price + amount, 0);
+export const getBasketTotal = (basket) => basket?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
     console.log(action)
     switch (action.type) {
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            }
         case "ADD_TO_BASKET":
             return { ...state, basket: [...state.basket, action.item] };
             break;
