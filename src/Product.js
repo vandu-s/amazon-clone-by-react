@@ -6,12 +6,13 @@ import { useStateValue } from './StateProvider';
 const Product = ({ id, title, image, price, rating }) => {
     const [{ basket }, dispatch] = useStateValue();
     const addToBasket = () => {
+
         //Add item to basket
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
                 id: id,
-                tittle: title,
+                title: title,
                 image: image,
                 price: price,
                 rating: rating
