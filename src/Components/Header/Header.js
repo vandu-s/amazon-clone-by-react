@@ -2,9 +2,9 @@ import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import SearchIcons from '@material-ui/icons/Search'
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import { useStateValue } from './StateProvider';
-import { auth } from './firebase';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { useStateValue } from '../../StateProvider/StateProvider';
+import { auth } from '../../Firebase/firebase';
 
 const Header = () => {
     const [{ user, basket }] = useStateValue();
@@ -56,9 +56,10 @@ const Header = () => {
                 <Link to="/checkout" className="header__link">
                     <div className="header__optionBasket">
                         {/* shoping basket icons */}
+
+                        <ShoppingCartIcon />
                         <span className="header__optionLineTwo header_basketCount">{basket.length}</span>
 
-                        <ShoppingBasketIcon />
                         {/* Number of items in the basket */}
                     </div>
                 </Link>

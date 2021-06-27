@@ -1,7 +1,6 @@
 .product {
     display         : flex;
     flex-direction  : column;
-    align-items     : center;
     justify-content : flex-end;
     max-height      : 400px;
     min-height      : 100px;
@@ -13,6 +12,10 @@
     border-radius   : 12px;
 
 
+}
+
+.product>p {
+    justify-content: left;
 }
 
 .product__info {
@@ -45,11 +48,10 @@
 }
 
 .btn {
-    color           : white;
     background-color: #f0c14b;
     border          : 1px solid #ccc;
     border-color    : #a88734 #9c7e31 #846a29;
-    padding         : 10px 8px;
-    border-radius   : 12px;
+    padding         : 9px 12px;
     cursor          : pointer;
+    border-radius   : 8px;
 }

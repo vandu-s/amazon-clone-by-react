@@ -1,12 +1,12 @@
 import './App.css';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Header from './Header';
-import Home from './Home';
-import Checkout from './Checkout'
-import Login from './Login';
-import { useStateValue } from './StateProvider';
-import { auth } from './firebase'
+import Header from './Components/Header/Header';
+import Home from './Components/Home/Home';
+import Checkout from './Components/Checkout/Checkout'
+import Login from './Components/Login/Login';
+import { useStateValue } from './StateProvider/StateProvider';
+import { auth } from './Firebase/firebase'
 
 function App() {
   const [{ user }, dispatch] = useStateValue();

@@ -64,8 +64,9 @@
 }
 
 .header__optionBasket {
-    display    : flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
 }
 
 .header_basketCount {
